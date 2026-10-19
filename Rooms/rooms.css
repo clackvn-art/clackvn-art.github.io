@@ -1,0 +1,242 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333333;
+    padding: 20px;
+}
+
+/* Container chứa danh sách khách sạn */
+.hotel-list-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Thẻ khách sạn chính */
+.hotel-card {
+    background-color: #ffffff;
+    border: 1.5px solid #801518; /* Viền đỏ đô */
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- CỘT TRÁI: HÌNH ẢNH --- */
+.hotel-media {
+    width: 360px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Khung ảnh chính */
+.main-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nút mũi tên slider */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.prev-btn { left: 8px; }
+.next-btn { right: 8px; }
+
+/* Danh sách ảnh nhỏ */
+.thumbnail-list {
+    display: flex;
+    gap: 6px;
+}
+
+.thumb {
+    width: calc(25% - 4.5px);
+    height: 50px;
+    object-fit: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.thumb:hover, .thumb.active {
+    opacity: 1;
+    border: 1px solid #801518;
+}
+
+/* --- CỘT PHẢI: THÔNG TIN --- */
+.hotel-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-name {
+    color: #801518; /* Màu đỏ đô tiêu đề */
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+/* Khối đánh giá */
+.rating-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.star-icon {
+    color: #ffc107; /* Màu vàng ngôi sao */
+    font-size: 14px;
+}
+
+.rating-score {
+    font-weight: bold;
+    color: #333333;
+}
+
+.separator {
+    color: #cccccc;
+}
+
+/* Các hàng thông tin icon (địa điểm, hotline) */
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.info-row .icon {
+    color: #ffc107; /* Icon màu vàng cam nhẹ */
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.info-row strong {
+    color: #333333;
+}
+
+/* Khối Giá phòng */
+.price-box {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.price-box strong {
+    color: #000000;
+    font-size: 18px;
+}
+
+/* Nút Chi tiết */
+.btn-detail {
+    display: block;
+    width: 100%;
+    background-color: #801518; /* Màu đỏ đô */
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: auto; /* Đẩy nút xuống đáy cột */
+    transition: background-color 0.2s;
+}
+
+.btn-detail:hover {
+    background-color: #600f11;
+}
+
+/* Responsive cho màn hình di động */
+@media (max-width: 768px) {
+    .hotel-card {
+        flex-direction: column;
+    }
+    .hotel-media {
+        width: 100%;
+    }
+}
+
+.hero-container {
+    width: 100vw;
+    height: 20vh;
+}
+
+/* Thanh Navigation Bar màu đỏ */
+.navbar {
+    width: 100%;
+    background-color: #cc0000; /* Màu đỏ nổi bật giống hình */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px 0 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Các mục Menu */
+.nav-item {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #ffeb3b; /* Đổi sang màu vàng nhẹ khi di chuột */
+    transform: translateY(-2px);
+}

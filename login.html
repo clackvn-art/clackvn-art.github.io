@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập / Đăng Ký</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="hero-container">
+        <header class="navbar">
+            <a href="homepage.html" class="nav-item">
+                <div class="logo-ssr">SSR</div>
+                <span>Trang chủ</span>
+            </a>
+            
+            <a href="service.html" class="nav-item">
+                <div class="logo-placeholder"></div>
+                <span>Dịch vụ</span>
+            </a>
+            
+            <a href="rooms.html" class="nav-item">
+                <div class="logo-placeholder"></div>
+                <span>Đặt phòng</span>
+            </a>
+            
+            <a href="contact.html" class="nav-item">
+                <div class="logo-placeholder"></div>
+                <span>Liên hệ</span>
+            </a>
+        </header>
+
+    <div class="form-container">
+        <form action="#" method="POST" class="form-table">
+            
+            <!-- Hàng 1: Họ và Tên -->
+            <div class="form-row full-width">
+                <label for="fullname">Họ và Tên:</label>
+                <input type="text" id="fullname" name="fullname">
+            </div>
+
+            <!-- Hàng 2: Email -->
+            <div class="form-row full-width">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <!-- Hàng 3: Chia làm 2 cột Giới tính & Số điện thoại -->
+            <div class="form-row split-row">
+                <!-- Cột trái: Giới tính -->
+                <div class="form-col">
+                    <label for="gender">Giới tính:</label>
+                    <select id="gender" name="gender">
+                        <option value="">-- Chọn --</option>
+                        <option value="nam">Nam</option>
+                        <option value="nu">Nữ</option>
+                        <option value="khac">Khác</option>
+                    </select>
+                </div>
+
+                <!-- Cột phải: Số điện thoại -->
+                <div class="form-col">
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </div>
+        </form>
+        <div class="submit-btn-container">
+            <button type="submit">Đăng ký / Đăng nhập</button>
+        </div>
+    </div>
+
+</body>
+</html>
